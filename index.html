@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="做好当下的一切">
@@ -74,7 +74,7 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha256-TThEtR+XalhWKkfF383YLOrI50NGNeIqrzS+q08afrY=" crossorigin="anonymous"><!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -235,7 +235,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-12-29 19:01:25 / 修改时间：19:02:53" itemprop="dateCreated datePublished" datetime="2024-12-29T19:01:25+08:00">2024-12-29</time>
+              <time title="创建时间：2024-12-29 19:01:25 / 修改时间：21:14:46" itemprop="dateCreated datePublished" datetime="2024-12-29T19:01:25+08:00">2024-12-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -258,167 +258,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h3><h4 id="a-证明-K-circ-是一个闭合的凸锥"><a href="#a-证明-K-circ-是一个闭合的凸锥" class="headerlink" title="(a) 证明 $K^\circ$ 是一个闭合的凸锥"></a>(a) 证明 $K^\circ$ 是一个闭合的凸锥</h4><p><strong>证明</strong>：</p>
-<ol>
-<li><p><strong>闭合性</strong>：设 ${w_k} \subseteq K^\circ$ 是一个收敛序列，且 $w_k \to w$。我们需要证明 $w \in K^\circ$。对于任意 $x \in K$，有：<br>$$<br>w_k^T x \leq 0 \quad \text{对于所有 } k.\</p>
-<p>由于内积是连续的，取极限得：<br>\</p>
-<p>w^T x &#x3D; \lim_{k \to \infty} w_k^T x \leq 0.<br>$$<br>因此，$w \in K^\circ$，所以 $K^\circ$ 是闭合的。</p>
-</li>
-<li><p><strong>凸性</strong>：设 $w_1, w_2 \in K^\circ$，对于任意 $\lambda \in [0, 1]$，考虑 $w &#x3D; \lambda w_1 + (1 - \lambda) w_2$。对于任意 $x \in K$，有：<br>$$<br>w^T x &#x3D; \lambda w_1^T x + (1 - \lambda) w_2^T x \leq \lambda \cdot 0 + (1 - \lambda) \cdot 0 &#x3D; 0.<br>$$<br>因此，$w \in K^\circ$，所以 $K^\circ$ 是凸的。</p>
-</li>
-<li><p><strong>锥性</strong>：对于任意 $w \in K^\circ$ 和 $\alpha \geq 0$，有：<br>$$<br>(\alpha w)^T x &#x3D; \alpha (w^T x) \leq 0,<br>$$<br>因此 $\alpha w \in K^\circ$。</p>
-</li>
-</ol>
-<p>综上所述，$K^\circ$ 是一个闭合的凸锥。</p>
-<h4 id="b-证明条件等价性"><a href="#b-证明条件等价性" class="headerlink" title="(b) 证明条件等价性"></a>(b) 证明条件等价性</h4><p><strong>证明</strong>：</p>
-<ol>
-<li><p>假设 $z^* &#x3D; \Pi_K(x)$。根据投影的性质，$z^* \in K$，且 $x - z^* \in K^\circ$，并且 $(x - z^*)^T z^* &#x3D; 0$，因为投影是最小化距离的，且在锥内。</p>
-</li>
-<li><p>反之，假设 $z^* \in K$，$x - z^* \in K^\circ$，且 $(x - z^*)^T z^* &#x3D; 0$。根据 $x - z^* \in K^\circ$，对于任意 $x \in K$，有：<br>$$<br>(x - z^*)^T z^* \leq 0.<br>$$<br>由于 $(x - z^*)^T z^* &#x3D; 0$，这意味着 $z^*$ 是 $x$ 在 $K$ 上的投影。</p>
-</li>
-</ol>
-<p>因此，$z^* &#x3D; \Pi_K(x)$ 当且仅当满足上述条件。</p>
-<h4 id="c-证明-x-Pi-K-x-Pi-K-circ-x"><a href="#c-证明-x-Pi-K-x-Pi-K-circ-x" class="headerlink" title="(c) 证明 $x &#x3D; \Pi_K(x) + \Pi_{K^\circ}(x)$"></a>(c) 证明 $x &#x3D; \Pi_K(x) + \Pi_{K^\circ}(x)$</h4><p><strong>证明</strong>：</p>
-<ol>
-<li><p>设 $z^* &#x3D; \Pi_K(x)$，根据 (b) 的条件，我们有 $x - z^* \in K^\circ$。</p>
-</li>
-<li><p>由于 $x - z^* \in K^\circ$，我们可以定义 $w^* &#x3D; \Pi_{K^\circ}(x)$，则有 $x - z^* &#x3D; w^*$。</p>
-</li>
-<li><p>因此，结合上述结果，我们得到：<br>$$<br>x &#x3D; z^* + w^* &#x3D; \Pi_K(x) + \Pi_{K^\circ}(x).<br>$$</p>
-</li>
-</ol>
-<p>综上所述， $x &#x3D; \Pi_K(x) + \Pi_{K^\circ}(x)$。</p>
-<hr>
-<h3 id="问题-2"><a href="#问题-2" class="headerlink" title="问题 2"></a>问题 2</h3><p>需要证明以下三个陈述是等价的：</p>
-<ol>
-<li><p>函数 $f$ 是 $\rho-convex$的，对于某个 $ \rho \in \mathbb{R} $。</p>
-</li>
-<li><p>函数 $( x \mapsto f(x) + c|x|^2 )$ 是凸的。</p>
-</li>
-<li><p>对于任意 $( x, y \in \mathbb{R}^n )$，有<br>$$<br>f(y) \geq f(x) + \langle \nabla f(x), y-x \rangle - \frac{1}{2}|y-x|^2.<br>$$</p>
-</li>
-</ol>
-<h4 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h4><p>**(1)$\Rightarrow$ (2)**：</p>
-<p>假设  $f$ 是 $\rho-convex$的。我们考虑函数$g(x) &#x3D; f(x) + c|x|^2 $，我们需要证明 $g(x)$ 是凸的。</p>
-<p>对于任意 $ x, y \in \mathbb{R}^n $ 和 $ \alpha \in (0, 1) $，根据 $\rho - convex$性质，有：<br>$$<br>f(\alpha x + (1-\alpha)y) \leq \alpha f(x) + (1-\alpha)f(y) + p\left(\frac{1}{2}\right)|\alpha x + (1-\alpha)y - y|^2.<br>$$<br>同时，考虑$ |x - y|^2$的性质，可以得到：<br>$$<br>|\alpha x + (1-\alpha)y - y|^2 &#x3D; |\alpha(x - y)|^2 &#x3D; \alpha^2 |x - y|^2.<br>$$<br>因此：<br>$$<br>f(\alpha x + (1-\alpha)y) \leq \alpha f(x) + (1-\alpha)f(y) + \frac{p}{2} \alpha^2 |x - y|^2.<br>$$<br>再加上$c|\alpha x + (1-\alpha)y|^2$的项，结合后可以得到 $ g$是凸的。</p>
-<p>**(2)$\Rightarrow$ (3)**：</p>
-<p>假设$ g(x) &#x3D; f(x) + c|x|^2$是凸的。根据凸性的定义，对于任意$x, y \in \mathbb{R}^n$和$alpha \in (0, 1)$，我们有：<br>$$<br>g(y) \geq g(x) + \langle \nabla g(x), y - x \rangle.<br>$$<br>展开 $ g $ 的定义，得到：<br>$$<br>f(y) + c|y|^2 \geq f(x) + c|x|^2 + \langle \nabla f(x) + 2c x, y - x \rangle.<br>$$<br>通过适当的变换，可以得到所需的不等式。</p>
-<p>**(3)$\Rightarrow$ (1)**：</p>
-<p>假设 (3) 成立。我们需要证明$ f$是 $\rho-convex$的。根据 (3) 的不等式，我们可以得到：<br>$$<br>f(y) \geq f(x) + \langle \nabla f(x), y-x \rangle - \frac{1}{2} |y-x|^2.<br>$$<br>这正是$\rho-convex$性的定义，因此$f$是的$\rho-convex$。</p>
-<p>综上所述，所有三个陈述是等价的。</p>
-<hr>
-<h3 id="问题-3"><a href="#问题-3" class="headerlink" title="问题 3"></a>问题 3</h3><h4 id="a-证明不等式"><a href="#a-证明不等式" class="headerlink" title="(a) 证明不等式"></a>(a) 证明不等式</h4><p>我们需要证明：<br>$$<br>\frac{b-x}{f(a)-f(b)} \leq \frac{f(x)-f(a)}{b-a} \leq \frac{b-x}{b-a}<br>$$<br>对于所有$x \in [a, b] $。</p>
-<ol>
-<li><p><strong>左侧不等式</strong>：</p>
-<ul>
-<li>由$ f $的凸性，对于 $ x \in [a, b] $，有：</li>
-</ul>
-<p>$$<br>f(x) \geq f(a) + \frac{f(b) - f(a)}{b-a}(x - a).<br>$$</p>
-<ul>
-<li>变形得到：</li>
-</ul>
-<p>$$<br>\frac{f(x) - f(a)}{x - a} \geq \frac{f(b) - f(a)}{b - a}.<br>$$</p>
-<ul>
-<li>结合 $ x $ 的位置，得到左侧不等式。</li>
-</ul>
-</li>
-<li><p><strong>右侧不等式</strong>：</p>
-<ul>
-<li>由 $ f $ 的凸性，对于 $ x \in [a, b] $，有：</li>
-</ul>
-<p>$$<br>f(x) \leq f(b) + \frac{f(a) - f(b)}{a - b}(x - b).<br>$$</p>
-<ul>
-<li>变形得到：</li>
-</ul>
-<p>$$<br>\frac{f(x) - f(b)}{x - b} \leq \frac{f(a) - f(b)}{a - b}.<br>$$</p>
-<ul>
-<li>结合 $ x $ 的位置，得到右侧不等式。</li>
-</ul>
-</li>
-</ol>
-<p>因此，两个不等式都成立。</p>
-<h4 id="b-证明不等式"><a href="#b-证明不等式" class="headerlink" title="(b) 证明不等式"></a>(b) 证明不等式</h4><p>我们需要证明：<br>$$<br>\frac{f(x)-f(a)}{f(b)-f(a)} \leq \frac{b-x}{b-a} \leq \frac{f(b)-f(x)}{f(b)-f(a)}<br>$$<br>对于所有 $ x \in (a, b) $。</p>
-<ol>
-<li><p><strong>左侧不等式</strong>：</p>
-<p>由 $ f $ 的凸性，对于 $ x \in (a, b) $，有：<br>$$<br>f(x) \geq f(a) + \frac{f(b) - f(a)}{b-a}(x - a).<br>$$<br>变形得到：<br>$$<br>\frac{f(x) - f(a)}{f(b) - f(a)} \leq \frac{x - a}{b - a}.<br>$$</p>
-</li>
-<li><p><strong>右侧不等式</strong>：</p>
-<p>由 $ f $ 的凸性，对于 $ x \in (a, b) $，有：<br>$$<br>f(x) \leq f(b) + \frac{f(a) - f(b)}{a - b}(x - b).<br>$$<br>变形得到：<br>$$<br>\frac{f(b) - f(x)}{f(b) - f(a)} \geq \frac{b - x}{b - a}.<br>$$</p>
-</li>
-</ol>
-<p>因此，两个不等式都成立。</p>
-<hr>
-<h3 id="问题-4"><a href="#问题-4" class="headerlink" title="问题 4"></a>问题 4</h3><p>假设 $ f: \mathbb{R}^n \rightarrow \mathbb{R} $ 是一个凸函数，且在 $ \mathbb{R}^n $ 上有界上界。我们需要证明 $ f $ 是常数。</p>
-<p><strong>证明</strong>：</p>
-<p>由于 $ f $ 是凸的，任意两个点 $ x, y \in \mathbb{R}^n $ 有：<br>$$<br>f(\alpha x + (1 - \alpha)y) \leq \alpha f(x) + (1 - \alpha)f(y) \quad \text{对于所有 } \alpha \in [0, 1].<br>$$<br>假设 $ f $ 有上界 $ M $，即 $ f(x) \leq M $ 对于所有 $ x \in \mathbb{R}^n $。</p>
-<p>选择任意 $ x_0 \in \mathbb{R}^n $，并取 $ y $ 趋近于 $ x_0 $，由于 $ f $ 的连续性，得到：<br>$$<br>f(y) \to f(x_0) \quad \text{当 } y \to x_0.<br>$$<br>由于 $ f $ 是凸的，且有界，假设 $ f(x_0) &lt; M $，则存在 $ \epsilon &gt; 0 $ 使得在某个邻域内 $ f(y) $ 也小于 $ M $。</p>
-<p>通过选择不同的 $ x $ 和 $ y $，可以得到 $ f $ 在整个域内的值都在 $ [f(x_0), M] $ 之间。</p>
-<p>由于 $ f $ 是凸的，且在整个域内有界，最终得到 $ f $ 必须是常数。</p>
-<p>因此，得出结论：如果 $ f $ 是凸的并且在 $ \mathbb{R}^n $ 上有界，那么 $ f $ 是常数。</p>
-<hr>
-<h3 id="问题5"><a href="#问题5" class="headerlink" title="问题5:"></a>问题5:</h3><p>判断每个函数是否是凸的。</p>
-<h4 id="a-f-x-e-x-1-on-mathbb-R"><a href="#a-f-x-e-x-1-on-mathbb-R" class="headerlink" title="(a) $f(x) &#x3D; e^x - 1 \  on\   \mathbb{R} $"></a>(a) $f(x) &#x3D; e^x - 1 \  on\   \mathbb{R} $</h4><p><strong>解答：</strong></p>
-<ol>
-<li>一阶导数：</li>
-</ol>
-<p>$$<br>f’(x) &#x3D; e^x<br>$$</p>
-<ol>
-<li><p>二阶导数：  </p>
-<p>由于 $ f’’(x) &#x3D; e^x &gt; 0 $ 对所有 $ x \in \mathbb{R} $ 恒成立，因此该函数是 凸的*。</p>
-</li>
-</ol>
-<h4 id="b-f-x-1-x-2-x-1-x-2-on-mathbb-R-2"><a href="#b-f-x-1-x-2-x-1-x-2-on-mathbb-R-2" class="headerlink" title="(b) $ f(x_1, x_2) &#x3D; x_1 x_2 $ on $ \mathbb{R}_{++}^2 $"></a>(b) $ f(x_1, x_2) &#x3D; x_1 x_2 $ on $ \mathbb{R}_{++}^2 $</h4><p><strong>解答：</strong></p>
-<ol>
-<li><p>一阶偏导数：<br>$$<br>f_{x_1} &#x3D; x_2, \quad f_{x_2} &#x3D; x_1<br>$$</p>
-</li>
-<li><p>二阶偏导数：<br>$$<br>f_{x_1 x_1} &#x3D; 0, \quad f_{x_1 x_2} &#x3D; 1, \quad f_{x_2 x_1} &#x3D; 1, \quad f_{x_2 x_2} &#x3D; 0<br>$$</p>
-</li>
-</ol>
-<p>Hessian 矩阵为：<br>$$<br>H(f) &#x3D; \begin{pmatrix} 0 &amp; 1 \ 1 &amp; 0 \end{pmatrix}<br>$$</p>
-<p>由于 Hessian 矩阵的特征值为 $\pm 1$，它并不是半正定的，因此该函数 不是凸的。</p>
-<h4 id="c-f-x-1-x-2-frac-1-x-1-x-2-on-mathbb-R-2"><a href="#c-f-x-1-x-2-frac-1-x-1-x-2-on-mathbb-R-2" class="headerlink" title="(c) $ f(x_1, x_2) &#x3D; \frac{1}{x_1 x_2} $ on $ \mathbb{R}_{++}^2 $"></a>(c) $ f(x_1, x_2) &#x3D; \frac{1}{x_1 x_2} $ on $ \mathbb{R}_{++}^2 $</h4><p><strong>解答：</strong></p>
-<ol>
-<li><p>一阶偏导数：<br>$$<br>f_{x_1} &#x3D; -\frac{1}{x_1^2 x_2}, \quad f_{x_2} &#x3D; -\frac{1}{x_1 x_2^2}<br>$$</p>
-</li>
-<li><p>二阶偏导数：<br>$$<br>f_{x_1 x_1} &#x3D; \frac{2}{x_1^3 x_2}, \quad f_{x_1 x_2} &#x3D; \frac{1}{x_1^2 x_2^2}, \quad f_{x_2 x_1} &#x3D; \frac{1}{x_1^2 x_2^2}, \quad f_{x_2 x_2} &#x3D; \frac{2}{x_1 x_2^3}<br>$$</p>
-</li>
-</ol>
-<p>Hessian 矩阵为：<br>$$<br>H(f) &#x3D; \begin{pmatrix}<br>\frac{2}{x_1^3 x_2} &amp; \frac{1}{x_1^2 x_2^2} \<br>\frac{1}{x_1^2 x_2^2} &amp; \frac{2}{x_1 x_2^3}<br>\end{pmatrix}<br>$$</p>
-<p>检查 Hessian 矩阵的正定性，经过计算可得该矩阵是正定的，因此函数 $ f(x_1, x_2) &#x3D; \frac{1}{x_1 x_2} $ 是凸的。</p>
-<h4 id="d-f-x-1-x-2-frac-x-1-x-2-on-mathbb-R-2"><a href="#d-f-x-1-x-2-frac-x-1-x-2-on-mathbb-R-2" class="headerlink" title="(d) $ f(x_1, x_2) &#x3D; \frac{x_1}{x_2} $ on $ \mathbb{R}_{++}^2 $"></a>(d) $ f(x_1, x_2) &#x3D; \frac{x_1}{x_2} $ on $ \mathbb{R}_{++}^2 $</h4><p><strong>解答：</strong></p>
-<p>计算一阶和二阶偏导数：</p>
-<ol>
-<li><p>一阶偏导数：<br>$$<br>f_{x_1} &#x3D; \frac{1}{x_2}, \quad f_{x_2} &#x3D; -\frac{x_1}{x_2^2}<br>$$</p>
-</li>
-<li><p>二阶偏导数：<br>$$<br>f_{x_1 x_1} &#x3D; 0, \quad f_{x_1 x_2} &#x3D; 0, \quad f_{x_2 x_1} &#x3D; 0, \quad f_{x_2 x_2} &#x3D; \frac{2x_1}{x_2^3}<br>$$</p>
-</li>
-</ol>
-<p>Hessian 矩阵为：<br>$$<br>H(f) &#x3D; \begin{pmatrix} 0 &amp; 0 \ 0 &amp; \frac{2x_1}{x_2^3} \end{pmatrix}<br>$$</p>
-<p>Hessian 矩阵的特征值为 $ 0 $ 和 $ \frac{2x_1}{x_2^3} $。对于 $ x_1, x_2 &gt; 0 $，第二个特征值大于零，因此该函数是凸的。</p>
-<h4 id="e-f-x-1-x-2-frac-x-1-2-x-2-on-mathbb-R-times-mathbb-R"><a href="#e-f-x-1-x-2-frac-x-1-2-x-2-on-mathbb-R-times-mathbb-R" class="headerlink" title="(e) $ f(x_1, x_2) &#x3D; \frac{x_1^2}{x_2} $ on $ \mathbb{R} \times \mathbb{R}_{++} $"></a>(e) $ f(x_1, x_2) &#x3D; \frac{x_1^2}{x_2} $ on $ \mathbb{R} \times \mathbb{R}_{++} $</h4><p><strong>解答：</strong></p>
-<p>我们计算一阶和二阶偏导数：</p>
-<ol>
-<li><p>一阶偏导数：<br>$$<br>f_{x_1} &#x3D; \frac{2x_1}{x_2}, \quad f_{x_2} &#x3D; -\frac{x_1^2}{x_2^2}<br>$$</p>
-</li>
-<li><p>二阶偏导数：<br>$$<br>f_{x_1 x_1} &#x3D; \frac{2}{x_2}, \quad f_{x_1 x_2} &#x3D; -\frac{2x_1}{x_2^2}, \quad f_{x_2 x_1} &#x3D; -\frac{2x_1}{x_2^2}, \quad f_{x_2 x_2} &#x3D; \frac{2x_1^2}{x_2^3}<br>$$</p>
-</li>
-</ol>
-<p>Hessian 矩阵为：<br>$$<br>H(f) &#x3D; \begin{pmatrix}<br>\frac{2}{x_2} &amp; -\frac{2x_1}{x_2^2} \<br>-\frac{2x_1}{x_2^2} &amp; \frac{2x_1^2}{x_2^3}<br>\end{pmatrix}<br>$$</p>
-<p>Hessian 矩阵的特征值不完全为正，因此该函数不是凸的。</p>
-<h4 id="f-f-x-1-x-2-x-1-alpha-x-2-1-alpha-where-0-leq-alpha-leq-1-on-mathbb-R-2"><a href="#f-f-x-1-x-2-x-1-alpha-x-2-1-alpha-where-0-leq-alpha-leq-1-on-mathbb-R-2" class="headerlink" title="(f) $ f(x_1, x_2) &#x3D; x_1^\alpha x_2^{1-\alpha} $ where $ 0 \leq \alpha \leq 1 $ on $ \mathbb{R}_{++}^2 $"></a>(f) $ f(x_1, x_2) &#x3D; x_1^\alpha x_2^{1-\alpha} $ where $ 0 \leq \alpha \leq 1 $ on $ \mathbb{R}_{++}^2 $</h4><p><strong>解答：</strong></p>
-<p>这是一个均匀函数，它是凸函数。</p>
-<hr>
-<h3 id="题目6："><a href="#题目6：" class="headerlink" title="题目6："></a>题目6：</h3><p>要证明函数</p>
-<p>$$<br>f(x) &#x3D; \left( \sum_{i&#x3D;1}^{n} x_i^p \right)^{1&#x2F;p}, \quad \text{定义域为 } \mathbb{R}^+<br>$$</p>
-<p><strong>解答：</strong></p>
-<h4 id="a-齐次性"><a href="#a-齐次性" class="headerlink" title="a. 齐次性"></a>a. 齐次性</h4><p>函数 $$ f(x) $$ 是正齐次函数，即 $$ f(k\mathbf{x}) &#x3D; kf(\mathbf{x}) $$ 对任意 $$ k &gt; 0 $$ 成立。</p>
-<h4 id="b-Minkowski-不等式"><a href="#b-Minkowski-不等式" class="headerlink" title="b. Minkowski 不等式"></a>b. Minkowski 不等式</h4><p>对于 $$ p &lt; 1 $$，Minkowski 不等式表明 $$ p $$-范数是凹函数。具体来说，对于任意 $$ \mathbf{x}, \mathbf{y} \in \mathbb{R}^+ $$，有：<br>$$<br>\left( \sum_{i&#x3D;1}^{n} (\lambda x_i + (1-\lambda) y_i)^p \right)^{1&#x2F;p} \geq \lambda \left( \sum_{i&#x3D;1}^{n} x_i^p \right)^{1&#x2F;p} + (1-\lambda) \left( \sum_{i&#x3D;1}^{n} y_i^p \right)^{1&#x2F;p}.<br>$$</p>
-<p>该不等式成立是因为 $$ p &lt; 1 $$ 导致函数具有次可加性。</p>
-<h4 id="c-二阶导数验证（可选）"><a href="#c-二阶导数验证（可选）" class="headerlink" title="c. 二阶导数验证（可选）"></a>c. 二阶导数验证（可选）</h4><p>虽然对于该多元函数，直接计算二阶导数较为复杂，但通过上述不等式分析已可证明凹性。</p>
-<p>由于 $$ p &lt; 1 $$，函数</p>
-<p>$$<br>f(x) &#x3D; \left( \sum_{i&#x3D;1}^{n} x_i^p \right)^{1&#x2F;p}<br>$$</p>
-<p>满足凹性定义，其次可加性确保其是一个凹函数。</p>
-
+          <h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题 1"></a>问题 1</h3><h4 id="a-证明-是一个闭合的凸锥"><a href="#a-证明-是一个闭合的凸锥" class="headerlink" title="(a) 证明  是一个闭合的凸锥"></a>(a) 证明 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>K</mi><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">K^\circ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span> 是一个闭合的凸锥</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/12/29/%E5%87%B8%E4%BC%98%E5%8C%96%E4%BD%9C%E4%B8%9A-2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -462,7 +310,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-12-29 18:59:33 / 修改时间：19:00:48" itemprop="dateCreated datePublished" datetime="2024-12-29T18:59:33+08:00">2024-12-29</time>
+              <time title="创建时间：2024-12-29 18:59:33 / 修改时间：21:14:37" itemprop="dateCreated datePublished" datetime="2024-12-29T18:59:33+08:00">2024-12-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -485,55 +333,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>Problem 1</strong>：<br>$$<br>将优化问题</p>
-<p>\text{最小化 } |Ax - b|_\infty</p>
-<p>满足</p>
-<p>|x|_1 \leq 1</p>
-<p>转化为线性规划。<br>$$</p>
-<h4 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h4><ol>
-<li><p>**重写 $|Ax - b|_\infty$**：<br>$$<br>根据 \ell_\infty 范数的定义，我们可以引入一个辅助变量 t ，使得：</p>
-<p>\</p>
-<p>|Ax - b|<em>\infty &#x3D; \max</em>{1 \leq i \leq m} |(Ax - b)_i| \leq t</p>
-<p>\</p>
-<p>这可以转化为以下约束：<br>\<br>-(Ax - b)_i \leq t \quad \text{和} \quad (Ax - b)_i \leq t \quad \text{对于所有 } i &#x3D; 1, 2, \ldots, m<br>\</p>
-<p>这意味着我们可以写出以下不等式：</p>
-<p>\<br>Ax - b \leq t \mathbf{1} \quad \text{和} \quad -Ax + b \leq t \mathbf{1}<br>\<br>其中  \mathbf{1}  是一个全1的向量。<br>$$</p>
-</li>
-<li><p><strong>将问题转化为线性规划</strong>：<br>于是我们需要最小化$t$，同时满足以下约束条件：<br>$$<br>Ax - b \leq t \mathbf{1}<br>\</p>
-<p>-Ax + b \leq t \mathbf{1}<br>\</p>
-<p>|x|_1 \leq 1<br>$$<br>最终的线性规划可以表述为：<br>$$<br>\text{最小化 } t<br>\</p>
-<p>\text{满足 } Ax - b &#x3D; t \mathbf{e}<br>\</p>
-<p>-Ax + b &#x3D; t \mathbf{e}<br>\</p>
-<p>\sum_{j&#x3D;1}^{n} |x_j| \leq 1<br>$$</p>
-</li>
-</ol>
-<p><strong>Problem 2</strong>：</p>
-<p>(a)证明所有满足$X$是半正定的，且$I-X$也是半正定的$X$构成的集合$S$是凸集<br>$$<br>假设X_1 , X_2 \in S \</p>
-<pre><code>考虑Y = \lambda X_1 + ( 1 - \lambda ) X_2\\
-</code></pre>
-<p>   y^T X_1 y \geq 0 \quad \text{和} \quad y^T X_2 y \geq 0 \quad \text{对于所有 } y \in \mathbb{R}^n<br>   \</p>
-<p>考虑任意向量  y \in \mathbb{R}^n<br>\<br>   计算 y^T Y y :<br>   \<br>   y^T Y y &#x3D; y^T (\lambda X_1 + (1 - \lambda) X_2) y &#x3D; \lambda y^T X_1 y + (1 - \lambda) y^T X_2 y<br>   \<br>   由于 X_1 和 X_2 都是半正定的，得到：</p>
-<p>   \<br>   y^T Y y \geq \lambda \cdot 0 + (1 - \lambda) \cdot 0 &#x3D; 0<br>   \<br>   因此，Y 是半正定的。<br>\<br>   现在考虑  I - Y ：<br>   \<br>   I - Y &#x3D; I - (\lambda X_1 + (1 - \lambda) X_2) &#x3D; (1 - \lambda) I - \lambda X_1 + (1 - \lambda) I - (1 - \lambda) X_2<br>   \<br>   计算 y^T (I - Y) y ：<br>   \<br>   y^T (I - Y) y &#x3D; y^T y - y^T Y y &#x3D; y^T y - (\lambda y^T X_1 y + (1 - \lambda) y^T X_2 y)<br>   \<br>   从而得到：<br>   \<br>   y^T (I - Y) y &#x3D; y^T y - \lambda y^T X_1 y - (1 - \lambda) y^T X_2 y<br>   \<br>   根据 I - X_1 和  I - X_2 都是半正定的，得到：<br>   \<br>   y^T (I - X_1) y \geq 0 \quad \text{和} \quad y^T (I - X_2) y \geq 0<br>   \<br>   所以：<br>   \<br>   y^T y \geq y^T X_1 y \quad \text{和} \quad y^T y \geq y^T X_2 y<br>   \<br>   结合线性组合性质：<br>   \<br>   y^T y \geq \lambda y^T X_1 y + (1 - \lambda) y^T X_2 y<br>   \<br>   因此，<br>   \<br>   y^T (I - Y) y \geq 0<br>   \<br>   这表明  I - Y 也是半正定的。<br>$$<br>(b) 证明集合 $S &#x3D; { X \in S_n : \text{rank}(X) \leq 1 } $是否为凸集</p>
-<p><strong>证明</strong>：<br>$$<br>设X_1, X_2 \in S，这意味着\text{rank}(X_1) \leq 1和\text{rank}(X_2) \leq 1。<br>\</p>
-<p>由于\text{rank}(X_1) \leq 1，我们可以表示 X_1为：<br>\<br>   X_1 &#x3D; u_1 v_1^T<br>   \<br>   其中 u_1 \in \mathbb{R}^m 和 v_1 \in \mathbb{R}^n。同理，X_2  可以表示为：<br>   \<br>   X_2 &#x3D; u_2 v_2^T<br>   \</p>
-<p>对于 \theta \in [0, 1] ，考虑矩阵：<br>   \<br>   X_\theta &#x3D; \theta X_1 + (1 - \theta) X_2 &#x3D; \theta (u_1 v_1^T) + (1 - \theta) (u_2 v_2^T)<br>   \<br>然而两个矩阵的和的秩有可能是2，故而不是凸集<br>$$<br><strong>Problem 3</strong>：</p>
-<p>设$ B(0, 1) \subset \mathbb{R}^n  $是单位欧几里得球，考虑集合$N(x) &#x3D; { u \in \mathbb{R}^n : u^T (y - x) \leq 0 \text{ 对于所有 } y \in B(0, 1) }$</p>
-<p>(a) 证明 ( N(x) ) 是一个凸锥</p>
-<p>$$<br>选择任意u_1, u_2 \in N(x): 根据定义，对于任意 y \in B(0, 1) ，都有：<br>   \<br>   u_1^T (y - x) \leq 0 \quad \text{和} \quad u_2^T (y - x) \leq 0<br>   \</p>
-<p>考虑非负组合：对于任意非负标量  \alpha, \beta \geq 0 ，考虑 u &#x3D; \alpha u_1 + \beta u_2 。<br>\<br>验证条件：我们需要验证 u^T (y - x) \leq 0 对于所有 y \in B(0, 1) ：<br>   \<br>   u^T (y - x) &#x3D; (\alpha u_1 + \beta u_2)^T (y - x) &#x3D; \alpha u_1^T (y - x) + \beta u_2^T (y - x)<br>   \<br>   由于  u_1^T (y - x) \leq 0 和 u_2^T (y - x) \leq 0 ，因此：<br>   \<br>   u^T (y - x) \leq \alpha \cdot 0 + \beta \cdot 0 &#x3D; 0<br>   \<br>   所以，u \in N(x) 。</p>
-<p>因此， N(x) 是一个凸锥。<br>$$</p>
-<p>(b) 给出 ( N(x) ) 的显式描述<br>$$<br>我们可以考虑  N(x)  中的向量 u  的条件。对于任意  y \in B(0, 1)，我们有：<br>\<br>|y|_2 \leq 1<br>\<br>因此，y - x  的范数可以表示为：<br>\<br>|y - x|_2 \leq |y|_2 + |x|_2 \leq 1 + |x|_2<br>\</p>
-<p>要使得  u^T (y - x) \leq 0  对所有  y  成立，u  必须在某个方向上与  y - x  形成一个夹角不小于 90 度。这意味着  u 必须指向  x 的反方向。<br>\<br>因此， N(x)  可以描述为所有指向  x  的反方向的向量的集合：<br>\<br>N(x) &#x3D; { u \in \mathbb{R}^n : u^T x \leq 0 }<br>\<br>$$<br><strong>Problem 4</strong>：</p>
-<p>(a) 找到 $ \Pi_{H^-}(s, c)(x) $ 的公式并证明其正确性</p>
-<p><strong>投影公式</strong>：</p>
-<p>对于任意点 $x \in \mathbb{R}^n $，其在半空间 $ H^-(s, c) $ 上的投影可以通过以下公式给出：<br>$\Pi_{H^-}(s, c)(x) &#x3D; x - \frac{s^T x - c}{|s|^2} s$</p>
-<p><strong>证明</strong>：<br>$$<br>希望找到一个点  y \in H^-(s, c) ，使得  ||y - x||  最小。根据投影的定义，最优解  y  应满足：<br>   \<br>   s^T y &#x3D; c<br>   \</p>
-<p>设 y &#x3D; x + \alpha s ，其中  \alpha  是一个待定的标量。我们需要找到  \alpha  使得 y 满足  s^T y &#x3D; c ：<br>   \<br>   s^T (x + \alpha s) &#x3D; s^T x + \alpha |s|^2 &#x3D; c<br>   \<br>   解这个方程得到：<br>   \<br>   \alpha &#x3D; \frac{c - s^T x}{|s|^2}<br>   \</p>
-<p>代入  y ：<br>   \<br>   y &#x3D; x + \frac{c - s^T x}{|s|^2} s<br>   \</p>
-<p>验证  y  在半空间内：<br>   \<br>   s^T y &#x3D; s^T x + (c - s^T x) &#x3D; c<br>   \<br>   因此  y 在超平面上，且由于 y 是通过向量s 的方向调整得到的，所以 y 在半空间  H^-(s, c) 内。<br>\<br>因此<br>   \<br>   \Pi_{H^-}(s, c)(x) &#x3D; x - \frac{s^T x - c}{|s|^2} s<br>   \<br>$$<br>(b) 证明对于任意 $ v \in \mathbb{R}^n $ 和 $ \delta \in \mathbb{R} $，都有$\Pi_{\Delta}(v) &#x3D; \Pi_{\Delta}(v + \delta e)$</p>
-<p><strong>证明</strong>：<br>$$<br>对于 v  的投影：<br>\<br>\Pi_{\Delta}(v) &#x3D; \text{argmin}_{x \in \Delta} |x - v|<br>\</p>
-<p>对于  v + \delta e  的投影：<br>\<br>\Pi_{\Delta}(v + \delta e) &#x3D; \text{argmin}<em>{x \in \Delta} |x - (v + \delta e)|<br>\<br>由于  e^T x &#x3D; 1  的约束是线性的，且  \delta  只是对所有坐标的均匀偏移，因此投影的结果不会受到  \delta  的影响。<br>\<br>故\Pi</em>{\Delta}(v) &#x3D; \Pi_{\Delta}(v + \delta e)<br>$$</p>
+          <p><strong>Problem 1</strong>：<br><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>将优化问题最小化 </mtext><mi mathvariant="normal">∥</mi><mi>A</mi><mi>x</mi><mo>−</mo><mi>b</mi><msub><mi mathvariant="normal">∥</mi><mi mathvariant="normal">∞</mi></msub><mtext>满足</mtext><mi mathvariant="normal">∥</mi><mi>x</mi><msub><mi mathvariant="normal">∥</mi><mn>1</mn></msub><mo>≤</mo><mn>1</mn><mtext>转化为线性规划。</mtext></mrow><annotation encoding="application/x-tex">
+将优化问题
 
+\text{最小化 } \|Ax - b\|_\infty
+
+满足
+
+\|x\|_1 \leq 1
+
+转化为线性规划。
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">将优化问题</span><span class="mord text"><span class="mord cjk_fallback">最小化</span><span class="mord"> </span></span><span class="mord">∥</span><span class="mord mathnormal">A</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mord"><span class="mord">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">满足</span><span class="mord">∥</span><span class="mord mathnormal">x</span><span class="mord"><span class="mord">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord cjk_fallback">转化为线性规划。</span></span></span></span></span></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/12/29/%E5%87%B8%E4%BC%98%E5%8C%96%E4%BD%9C%E4%B8%9A-1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -652,7 +470,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-12-29 02:17:07 / 修改时间：16:22:51" itemprop="dateCreated datePublished" datetime="2024-12-29T02:17:07+08:00">2024-12-29</time>
+              <time title="创建时间：2024-12-29 02:17:07 / 修改时间：21:14:10" itemprop="dateCreated datePublished" datetime="2024-12-29T02:17:07+08:00">2024-12-29</time>
             </span>
 
           
@@ -667,19 +485,14 @@
 
       
           <p>Welcome to Boring’s TimeHouse!</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/12/29/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -765,8 +578,10 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">1</span>
@@ -802,7 +617,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">BoringZheng</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
         
@@ -828,7 +643,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
