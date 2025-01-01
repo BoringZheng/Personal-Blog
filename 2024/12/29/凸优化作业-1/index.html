@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Problem 1：将优化问题最小化 ∥Ax−b∥∞满足∥x∥1≤1转化为线性规划。 将优化问题  \text{最小化 } \|Ax - b\|_\infty  满足  \|x\|_1 \leq 1  转化为线性规划。 将优化问题最小化 ∥Ax−b∥∞​满足∥x∥1​≤1转化为线性规划。">
+  <meta name="description" content="Problem 1：将优化问题最小化 ∥Ax−b∥∞满足∥x∥1≤1转化为线性规划。 将优化问题  \text{最小化 } \|Ax - b\|_\infty  满足  \|x\|_1 \leq 1  转化为线性规划。 将优化问题最小化 ∥Ax−b∥∞​满足∥x∥1​≤1转化为线性规划。 解答： 重写 ∥Ax−b∥∞\|Ax - b\|_\infty∥Ax−b∥∞​： 根据ℓ∞范数的定义，我们">
 <meta property="og:type" content="article">
 <meta property="og:title" content="凸优化作业-1">
 <meta property="og:url" content="http://example.com/2024/12/29/%E5%87%B8%E4%BC%98%E5%8C%96%E4%BD%9C%E4%B8%9A-1/index.html">
 <meta property="og:site_name" content="TimeHouse">
-<meta property="og:description" content="Problem 1：将优化问题最小化 ∥Ax−b∥∞满足∥x∥1≤1转化为线性规划。 将优化问题  \text{最小化 } \|Ax - b\|_\infty  满足  \|x\|_1 \leq 1  转化为线性规划。 将优化问题最小化 ∥Ax−b∥∞​满足∥x∥1​≤1转化为线性规划。">
+<meta property="og:description" content="Problem 1：将优化问题最小化 ∥Ax−b∥∞满足∥x∥1≤1转化为线性规划。 将优化问题  \text{最小化 } \|Ax - b\|_\infty  满足  \|x\|_1 \leq 1  转化为线性规划。 将优化问题最小化 ∥Ax−b∥∞​满足∥x∥1​≤1转化为线性规划。 解答： 重写 ∥Ax−b∥∞\|Ax - b\|_\infty∥Ax−b∥∞​： 根据ℓ∞范数的定义，我们">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-29T10:59:33.000Z">
-<meta property="article:modified_time" content="2024-12-29T13:14:37.319Z">
+<meta property="article:modified_time" content="2025-01-01T13:30:05.193Z">
 <meta property="article:author" content="BoringZheng">
 <meta name="twitter:card" content="summary">
 
@@ -178,10 +178,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-12-29 18:59:33 / 修改时间：21:14:37" itemprop="dateCreated datePublished" datetime="2024-12-29T18:59:33+08:00">2024-12-29</time>
+              <time title="创建时间：2024-12-29 18:59:33" itemprop="dateCreated datePublished" datetime="2024-12-29T18:59:33+08:00">2024-12-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-01-01 21:30:05" itemprop="dateModified" datetime="2025-01-01T21:30:05+08:00">2025-01-01</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -203,7 +209,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>Problem 1</strong>：<br><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>将优化问题最小化 </mtext><mi mathvariant="normal">∥</mi><mi>A</mi><mi>x</mi><mo>−</mo><mi>b</mi><msub><mi mathvariant="normal">∥</mi><mi mathvariant="normal">∞</mi></msub><mtext>满足</mtext><mi mathvariant="normal">∥</mi><mi>x</mi><msub><mi mathvariant="normal">∥</mi><mn>1</mn></msub><mo>≤</mo><mn>1</mn><mtext>转化为线性规划。</mtext></mrow><annotation encoding="application/x-tex">
+         <span id="more"></span>
+<p><strong>Problem 1</strong>：<br><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>将优化问题最小化 </mtext><mi mathvariant="normal">∥</mi><mi>A</mi><mi>x</mi><mo>−</mo><mi>b</mi><msub><mi mathvariant="normal">∥</mi><mi mathvariant="normal">∞</mi></msub><mtext>满足</mtext><mi mathvariant="normal">∥</mi><mi>x</mi><msub><mi mathvariant="normal">∥</mi><mn>1</mn></msub><mo>≤</mo><mn>1</mn><mtext>转化为线性规划。</mtext></mrow><annotation encoding="application/x-tex">
 将优化问题
 
 \text{最小化 } \|Ax - b\|_\infty
@@ -214,7 +221,6 @@
 
 转化为线性规划。
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">将优化问题</span><span class="mord text"><span class="mord cjk_fallback">最小化</span><span class="mord"> </span></span><span class="mord">∥</span><span class="mord mathnormal">A</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mord"><span class="mord">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord cjk_fallback">满足</span><span class="mord">∥</span><span class="mord mathnormal">x</span><span class="mord"><span class="mord">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">1</span><span class="mord cjk_fallback">转化为线性规划。</span></span></span></span></span></p>
- <span id="more"></span>
 <h4 id="解答："><a href="#解答：" class="headerlink" title="解答："></a>解答：</h4><ol>
 <li><p><strong>重写 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∥</mi><mi>A</mi><mi>x</mi><mo>−</mo><mi>b</mi><msub><mi mathvariant="normal">∥</mi><mi mathvariant="normal">∞</mi></msub></mrow><annotation encoding="application/x-tex">\|Ax - b\|_\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∥</span><span class="mord mathnormal">A</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mord"><span class="mord">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></strong>：</p>
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>根据</mtext><msub><mi mathvariant="normal">ℓ</mi><mi mathvariant="normal">∞</mi></msub><mtext>范数的定义，我们可以引入一个辅助变量</mtext><mi>t</mi><mtext>，使得：</mtext><mspace linebreak="newline"></mspace><mi mathvariant="normal">∥</mi><mi>A</mi><mi>x</mi><mo>−</mo><mi>b</mi><msub><mi mathvariant="normal">∥</mi><mi mathvariant="normal">∞</mi></msub><mo>=</mo><munder><mrow><mi>max</mi><mo>⁡</mo></mrow><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>m</mi></mrow></munder><mi mathvariant="normal">∣</mi><mo stretchy="false">(</mo><mi>A</mi><mi>x</mi><mo>−</mo><mi>b</mi><msub><mo stretchy="false">)</mo><mi>i</mi></msub><mi mathvariant="normal">∣</mi><mo>≤</mo><mi>t</mi><mspace linebreak="newline"></mspace><mtext>这可以转化为以下约束：</mtext><mspace linebreak="newline"></mspace><mo>−</mo><mo stretchy="false">(</mo><mi>A</mi><mi>x</mi><mo>−</mo><mi>b</mi><msub><mo stretchy="false">)</mo><mi>i</mi></msub><mo>≤</mo><mi>t</mi><mspace width="1em"/><mtext>和</mtext><mspace width="1em"/><mo stretchy="false">(</mo><mi>A</mi><mi>x</mi><mo>−</mo><mi>b</mi><msub><mo stretchy="false">)</mo><mi>i</mi></msub><mo>≤</mo><mi>t</mi><mspace width="1em"/><mtext>对于所有 </mtext><mi>i</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><mi>m</mi><mspace linebreak="newline"></mspace><mtext>这意味着我们可以写出以下不等式：</mtext><mspace linebreak="newline"></mspace><mi>A</mi><mi>x</mi><mo>−</mo><mi>b</mi><mo>≤</mo><mi>t</mi><mn mathvariant="bold">1</mn><mspace width="1em"/><mtext>和</mtext><mspace width="1em"/><mo>−</mo><mi>A</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo>≤</mo><mi>t</mi><mn mathvariant="bold">1</mn><mspace linebreak="newline"></mspace><mtext>其中</mtext><mn mathvariant="bold">1</mn><mtext>是一个全</mtext><mn>1</mn><mtext>的向量。</mtext></mrow><annotation encoding="application/x-tex">
@@ -517,14 +523,14 @@ N(x) = \{ u \in \mathbb{R}^n : u^T x \leq 0 \}
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
